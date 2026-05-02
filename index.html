@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Costa Coffee redesign demo focused on mobile ordering, menu discovery, and store pickup." />
+  <title>Costa Coffee Egypt Redesign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="#">
+        <span class="brand-mark">Costa</span>
+        <span class="brand-sub">Coffee Egypt</span>
+      </a>
+
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#stores">Stores</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <button class="cart-button" id="cart-trigger" type="button" aria-controls="cart-drawer" aria-expanded="false">
+          Cart
+          <span class="cart-count" id="nav-cart-count" aria-live="polite">0</span>
+        </button>
+        <a class="nav-cta" href="#menu">Order Now</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-panel" id="mobile-menu" hidden>
+      <ul class="mobile-links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#stores">Stores</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-shell">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">Costa Coffee redesign concept</p>
+        <h1>Your coffee. Ready before you arrive.</h1>
+        <p class="hero-text">
+          A cleaner, faster Costa experience built for quick pickup, menu discovery,
+          and finding the right store in seconds.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#menu">Order Ahead</a>
+          <a class="button button-secondary" href="#stores">Find Store</a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-card">
+            <span class="meta-label">Pickup time</span>
+            <strong id="hero-pickup-time">Ready in 7 min</strong>
+            <span>Built for mobile ordering and fast collection</span>
+          </div>
+          <div class="meta-card meta-card-accent">
+            <span class="meta-label">Nearby store</span>
+            <strong id="hero-store-name">City Stars Mall</strong>
+            <span id="hero-store-distance">2.4 km away</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal>
+        <div class="hero-photo-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+            alt="Coffee cup on a cafe counter"
+            width="900"
+            height="1125"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+
+        <div class="hero-floating hero-floating-top">
+          <span class="floating-label">Order ahead</span>
+          <strong>Tap. Pay. Pick up.</strong>
+        </div>
+
+        <div class="hero-floating hero-floating-bottom">
+          <span class="floating-label">Nearest Costa</span>
+          <strong id="hero-store-badge">Nasr City</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-actions section-shell" aria-label="Quick actions">
+      <a class="action-card" href="#menu" data-reveal>
+        <span class="action-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M6 4h12l-1.1 7.1a3 3 0 0 1-3 2.5H10.1a3 3 0 0 1-3-2.5L6 4Zm1.7 11.3A2.5 2.5 0 1 0 10.2 18a2.5 2.5 0 0 0-2.5-2.7Zm6.1 0A2.5 2.5 0 1 0 16.3 18a2.5 2.5 0 0 0-2.5-2.7Z" fill="currentColor" />
+          </svg>
+        </span>
+        <strong>Order Menu</strong>
+        <p>Browse best sellers and add in one tap.</p>
+      </a>
+
+      <a class="action-card" href="#stores" data-reveal>
+        <span class="action-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M12 2a7 7 0 0 1 7 7c0 4.8-4.3 10.2-6 12.2a1.3 1.3 0 0 1-2 0C9.3 19.2 5 13.8 5 9a7 7 0 0 1 7-7Zm0 9.2A2.2 2.2 0 1 0 12 6.8a2.2 2.2 0 0 0 0 4.4Z" fill="currentColor" />
+          </svg>
+        </span>
+        <strong>Find Store</strong>
+        <p>See your nearest cafe first and get directions fast.</p>
+      </a>
+
+      <a class="action-card" href="#menu" data-reveal>
+        <span class="action-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13Zm4 2v2h8v-2H8Zm0 4v2h8v-2H8Zm0 4v2h5v-2H8Z" fill="currentColor" />
+          </svg>
+        </span>
+        <strong>View Full Menu</strong>
+        <p>Filter hot, cold, or food without leaving the page.</p>
+      </a>
+    </section>
+
+    <section class="menu section-shell" id="menu">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Menu</p>
+        <h2>Built for quick decisions and faster ordering.</h2>
+        <p>
+          Clear categories, readable nutrition info, and one-tap add actions make
+          the menu easier to use on mobile.
+        </p>
+      </div>
+
+      <div class="menu-toolbar" data-reveal>
+        <div class="category-tabs" role="tablist" aria-label="Menu categories">
+          <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-category="hot">Hot</button>
+          <button class="tab-button" type="button" role="tab" aria-selected="false" data-category="cold">Cold</button>
+          <button class="tab-button" type="button" role="tab" aria-selected="false" data-category="food">Food</button>
+        </div>
+        <p class="menu-toolbar-note">Tap add to build your order, then review it from the sticky cart.</p>
+      </div>
+
+      <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="story-strip section-shell" id="story" data-reveal>
+      <div class="story-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2>Warm brand cues. A sharper digital experience.</h2>
+        <p>
+          This concept keeps Costa's rich tones and cafe warmth, but rebuilds the
+          journey around what matters most on mobile: order, pickup, and location.
+        </p>
+      </div>
+      <div class="story-points">
+        <div class="story-point">
+          <strong>Mobile first</strong>
+          <span>Readable, touch-friendly, and optimized for small screens.</span>
+        </div>
+        <div class="story-point">
+          <strong>Conversion focused</strong>
+          <span>Clear paths to order ahead, find store, and browse the menu.</span>
+        </div>
+        <div class="story-point">
+          <strong>Premium feel</strong>
+          <span>Soft depth, better spacing, and less visual clutter.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="stores section-shell" id="stores">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Store Locator</p>
+        <h2>Your nearest Costa, sorted first.</h2>
+        <p>
+          Use your current location or browse the closest cafes, with status,
+          distance, and direct map links built in.
+        </p>
+      </div>
+
+      <div class="stores-toolbar" data-reveal>
+        <button class="utility-button" id="use-location" type="button">Use My Location</button>
+        <p class="stores-status" id="location-status" aria-live="polite">Showing nearest stores from central Cairo.</p>
+      </div>
+
+      <div class="stores-grid" id="stores-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer-grid section-shell">
+      <div class="footer-brand-block">
+        <a class="brand brand-footer" href="#">
+          <span class="brand-mark">Costa</span>
+          <span class="brand-sub">Coffee Egypt</span>
+        </a>
+        <p>
+          Static redesign demo focused on better mobile ordering, cleaner navigation,
+          and store-first UX.
+        </p>
+      </div>
+
+      <div class="footer-group">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#stores">Stores</a></li>
+          <li><a href="#story">Our Story</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-group">
+        <h2>Support</h2>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-group">
+        <h2>Follow</h2>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm0 2.2A1.8 1.8 0 0 0 5.2 7v10A1.8 1.8 0 0 0 7 18.8h10a1.8 1.8 0 0 0 1.8-1.8V7A1.8 1.8 0 0 0 17 5.2H7Zm10.6 1.4a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2A2.8 2.8 0 1 0 12 14.8a2.8 2.8 0 0 0 0-5.6Z" fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M13.3 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.4V10H7.2v3h2.7v8h3.4Z" fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M18.9 4H21l-4.6 5.3L22 20h-4.4l-3.4-4.6L10.2 20H8.1l4.9-5.7L2 4h4.5l3 4.1L12.9 4h2.1l-4.5 5.2 3.8 5.1L18.9 4Z" fill="currentColor" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-bar" id="cart-bar" hidden>
+    <button class="cart-bar-button" id="cart-bar-trigger" type="button">
+      <span class="cart-bar-copy">
+        <span id="cart-bar-count">0 items</span>
+        <small>Review your order</small>
+      </span>
+      <strong id="cart-bar-total">EGP 0</strong>
+    </button>
+  </div>
+
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-labelledby="cart-title">
+    <div class="cart-drawer-header">
+      <h2 id="cart-title">Your Order</h2>
+      <button class="icon-button" id="cart-close" type="button" aria-label="Close cart">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <div class="cart-empty" id="cart-empty">
+        <strong>No items yet</strong>
+        <p>Add drinks or food from the menu to build your order.</p>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-totals">
+        <span>Subtotal</span>
+        <strong id="cart-total">EGP 0</strong>
+      </div>
+      <button class="button button-primary checkout-button" id="checkout-button" type="button" disabled>Continue to Checkout</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
